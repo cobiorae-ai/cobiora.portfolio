@@ -18,6 +18,24 @@
     }));
   }
 
+  // Photo slots: add your real image to assets/projects using the filename in
+  // data-photo. Once the image loads, it replaces the starter illustration or
+  // placeholder. If the file doesn't exist, the original fallback remains.
+  document.querySelectorAll('[data-photo]').forEach(slot => {
+    const src = slot.dataset.photo;
+    if (!src) return;
+    const photo = document.createElement('img');
+    photo.className = 'uploaded-photo';
+    if (slot.dataset.photoFit === 'contain') photo.classList.add('fit-contain');
+    photo.alt = slot.dataset.photoAlt || 'Project image';
+    photo.loading = 'eager'; // The image is initially hidden until its load event fires.
+    photo.decoding = 'async';
+    photo.addEventListener('load', () => slot.classList.add('has-photo'), { once: true });
+    photo.addEventListener('error', () => photo.remove(), { once: true });
+    photo.src = src;
+    slot.appendChild(photo);
+  });
+
   const scene = document.getElementById('rover-scene');
   if (!scene) return; // Project detail pages don't include the animation.
   const frame = document.getElementById('animation-card');

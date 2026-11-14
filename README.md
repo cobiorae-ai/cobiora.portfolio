@@ -13,12 +13,14 @@ robotics-portfolio-starter/
 ├── script.js                   Walker animation and navigation controls
 ├── .nojekyll                   Tells GitHub Pages to serve files directly
 ├── assets/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── projects/                 Add your real JPG/PNG images here
 ├── projects/
 │   ├── optimal-gearing.html
 │   ├── pterosaur-glider.html
 │   ├── robotic-arm.html
 │   └── moonranger-interface.html
+├── IMAGE_GUIDE.md               Image filenames and instructions
 └── README.md
 ```
 
@@ -62,6 +64,8 @@ Then complete step 6 above. You may need to authenticate with GitHub when pushin
 **Alternative: only GitHub in your browser:** create the repository, choose **Add file → Upload files**, and upload the site files. Preserve the `projects/` and `assets/` directory structure: GitHub's web uploader behavior for folders varies by browser; using GitHub Desktop is simpler if it does not preserve folders. Do not upload the ZIP as a ZIP—GitHub Pages needs the uncompressed files.
 
 ## 3. Personalize the website before sharing it
+
+**Adding photos or scientific figures:** See [IMAGE_GUIDE.md](IMAGE_GUIDE.md). The site now automatically swaps selected placeholder illustrations with real files from `assets/projects/`, using filenames listed in the guide. The pterosaur homepage card now has a generic airfoil schematic rather than a possibly misleading creature silhouette.
 
 **Start with `index.html`:**
 
