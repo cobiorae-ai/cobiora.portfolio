@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFDBBB">
+  <meta name="description" content="Simulation-based 3D occupancy mapping and autonomous robotic exploration using depth cameras and motion planning.">
+  <title>Autonomous Mapping &amp; Exploration | Chisom Obiora</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../project-additions.css">
+  <script defer src="../script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-row">
+      <a class="wordmark" href="../index.html" aria-label="Chisom Obiora, home">
+        <span class="wordmark-mark" aria-hidden="true">CO<span class="mark-dot">.</span></span>
+        <span class="wordmark-label">CHISOM OBIORA</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#cv">CV</a>
+        <a class="nav-contact" href="../index.html#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="shell subpage-hero">
+      <a class="back-link" href="../index.html#projects">← Back to selected work</a>
+      <span class="section-num">ROBOTICS / MOBILE ROBOTICS · 2026</span>
+      <h1>Autonomous Mapping &amp; Exploration</h1>
+      <p class="subpage-summary">Building a spatial representation of unfamiliar environments and planning autonomous exploration with depth-camera measurements and sampling-based methods.</p>
+      <div class="detail-tags"><span>3D Mapping</span><span>Log-Odds</span><span>RRT</span><span>Open3D</span><span>Python</span></div>
+    </section>
+    <section class="shell"><div class="detail-banner"><strong>How can robots explore <em>unknown space?</em></strong></div></section>
+    <section class="shell detail-content">
+      <aside>PROJECT DETAILS / 01</aside>
+      <div class="detail-article">
+        <h2>Overview</h2>
+        <p>Robots operating in unfamiliar environments must discover obstacles and plan safe movements without a complete map. In a Mobile Robotics project at Carnegie Mellon University, I implemented a depth-camera simulation workflow to build three-dimensional occupancy maps and support autonomous exploration. I used log-odds updates to combine successive depth measurements into an occupancy representation, then worked with sampling-based planning approaches such as rapidly exploring random trees (RRT) to investigate candidate motions and exploration paths. The work included visualization and testing in simulated environments with different levels of complexity. These experiments illustrate the relationship between mapping quality, planning behavior, and the challenges of navigating unobserved space.</p>
+        <h2>My Contributions</h2>
+        <ul><li>Implemented occupancy-grid updates from simulated depth-camera data.</li><li>Used log-odds representations to accumulate evidence about free and occupied space.</li><li>Developed or evaluated RRT-based exploration and path planning in simulated environments.</li><li>Visualized maps, sampled trees, and paths with Python and Open3D.</li></ul>
+        <h2>Design Process &amp; Methods</h2>
+        <p>The exploration workflow converts sensor measurements into a spatial map, uses that map to reason about reachable space, and checks planned routes in simulation.</p>
+        <div class="project-steps">
+          <div class="project-step"><span class="step-index">01</span><h3>Sense the environment</h3><p>Simulate depth-camera measurements from a robot viewpoint.</p></div><div class="project-step"><span class="step-index">02</span><h3>Update a 3D map</h3><p>Integrate measurements into a log-odds occupancy grid representing known and unknown space.</p></div><div class="project-step"><span class="step-index">03</span><h3>Plan &amp; visualize</h3><p>Use sampling-based planning and map visualizations to inspect exploration in different environments.</p></div>
+        </div>
+        <h2>Results &amp; Evaluation</h2>
+        <p>The simulation work produced occupancy-map and planning visualizations for exploring environments of varying complexity. A final evaluation should report representative completion behavior, planning time, map coverage, or failure cases from your actual runs. The current page intentionally avoids invented performance metrics.</p>
+        <h2>Project Figures</h2>
+        <p class="figure-intro">Add your actual figures in <code>assets/projects/</code> using the names below. The placeholder will automatically be replaced when the image is available.</p>
+        <div class="image-placeholders">
+        <figure class="project-figure" data-photo="../assets/projects/mapping-grid.png" data-photo-alt="3D occupancy-grid visualization of a simulated environment" data-photo-fit="contain"><div class="image-placeholder">ADD YOUR FIGURE<br>3D occupancy grid</div><figcaption>Depth measurements accumulated into a 3D occupancy representation.</figcaption></figure><figure class="project-figure" data-photo="../assets/projects/mapping-rrt.png" data-photo-alt="Exploration planning tree or simulated planned trajectory" data-photo-fit="contain"><div class="image-placeholder">ADD YOUR FIGURE<br>RRT tree / planned path</div><figcaption>Sampling-based exploration path or planning tree from simulation.</figcaption></figure>
+        </div>
+        <div class="detail-note">Portfolio draft: replace the example descriptions with results and screenshots from your actual runs, especially if different homework components were evaluated separately.</div>
+        <h2>Conclusions &amp; Next Steps</h2>
+        <p>This project connected perception, spatial representation, and motion planning in a common robotics workflow. Next, I would highlight a few difficult environments, explain what limited exploration performance, and show how the planner responds to incomplete or changing map information.</p>
+      </div>
+    </section>
+    <section class="shell next-projects"><a href="../index.html#projects">← View all projects</a></section>
+  </main>
+  <footer class="footer shell">
+    <span>© <span id="year">2026</span> Chisom Obiora</span>
+    <span>Designed with curiosity. Built with HTML, CSS &amp; JavaScript.</span>
+  </footer>
+</body>
+</html>
