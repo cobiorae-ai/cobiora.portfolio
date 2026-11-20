@@ -4,15 +4,29 @@
 
   const navToggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('primary-nav');
+  const projectsDropdown = nav?.querySelector('.projects-dropdown');
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(open));
+      if (!open && projectsDropdown) projectsDropdown.open = false;
     });
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       nav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
+      if (projectsDropdown) projectsDropdown.open = false;
     }));
+  }
+
+  if (projectsDropdown) {
+    document.addEventListener('click', event => {
+      if (!projectsDropdown.contains(event.target)) projectsDropdown.open = false;
+    });
+    projectsDropdown.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !projectsDropdown.open) return;
+      projectsDropdown.open = false;
+      projectsDropdown.querySelector('summary').focus();
+    });
   }
 
   // Photo slots: add your real image to assets/projects using the filename in
